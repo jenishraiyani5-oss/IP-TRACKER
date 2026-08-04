@@ -105,34 +105,3 @@ class NetworkTools:
         except (socket.herror, socket.gaierror):
             pass
         return info
-
-import cv2
-
-class WebcamTools:
-    """Handles local webcam access and image capture."""
-
-    @staticmethod
-    def capture_photo(output_path: str = "webcam_snap.jpg", camera_index: int = 0) -> bool:
-        """
-        Webcam se ek photo capture karke save karta hai.
-        
-        Args:
-            output_path (str): File saving location.
-            camera_index (int): Camera ID (0 default camera hota hai).
-        Returns:
-            bool: True if successful, False otherwise.
-        """
-        cap = cv2.VideoCapture(camera_index)
-        if not cap.isOpened():
-            logger.error("Webcam open nahi ho saka.")
-            return False
-
-        ret, frame = cap.read()
-        if ret:
-            cv2.imwrite(output_path, frame)
-            logger.info(f"Webcam photo saved at {output_path}")
-            cap.release()
-            return True
-        
-        cap.release()
-        return False

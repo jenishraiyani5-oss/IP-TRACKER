@@ -38,7 +38,7 @@ It queries public geolocation APIs to retrieve information about any IPv4 or IPv
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourname/ip_tracker.git
+git clone [https://github.com/yourname/ip_tracker.git](https://github.com/jenishraiyani5-oss/IP-TRACKER.git)
 cd ip_tracker
 
 # (Recommended) Create a virtual environment

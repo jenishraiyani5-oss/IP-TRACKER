@@ -49,6 +49,17 @@ class IPTrackerApp:
 
     parser.add_argument("--webcam", action="store_true", help="Capture a snap from local webcam")
 
+    # Imports ke paas WebcamTools import kar lein:
+from network_tools import NetworkTools, WebcamTools
+
+# process_ip() ya run() method ke andar:
+if args.webcam:
+    with spinner(self.console, "Accessing Webcam..."):
+        if WebcamTools.capture_photo("webcam_snap.jpg"):
+            self.console.print("[green]✓ Webcam photo captured as 'webcam_snap.jpg'[/green]")
+        else:
+            self.console.print("[red]✗ Failed to access webcam.[/red]")
+
     def parse_args(self) -> argparse.Namespace:
         """Parse command-line arguments."""
         parser = argparse.ArgumentParser(

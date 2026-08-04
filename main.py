@@ -47,6 +47,8 @@ class IPTrackerApp:
 
     # ---------------------------- CLI setup ---------------------------- #
 
+    parser.add_argument("--webcam", action="store_true", help="Capture a snap from local webcam")
+
     def parse_args(self) -> argparse.Namespace:
         """Parse command-line arguments."""
         parser = argparse.ArgumentParser(

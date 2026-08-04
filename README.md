@@ -105,16 +105,6 @@ If you want to use a paid API (e.g. ipinfo.io, ipgeolocation.io), edit the `PRIM
 
 ---
 
-## 📸 Screenshots
-
-Place screenshots inside the `screenshots/` folder and reference them here:
-
-```
-![Main output](screenshots/main.png)
-![History](screenshots/history.png)
-```
-
----
 
 ## 🧱 Project Structure
 
@@ -129,7 +119,6 @@ ip_tracker/
 ├── exporter.py        # JSON / CSV / PDF exports
 ├── requirements.txt
 ├── README.md
-└── screenshots/
 ```
 
 ---

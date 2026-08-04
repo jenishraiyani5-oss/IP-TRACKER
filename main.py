@@ -27,7 +27,7 @@ from tracker import (
     APIFailureError,
     NoInternetError,
 )
-from network_tools import NetworkTools
+from network_tool import NetworkTools
 from exporter import Exporter
 from utils import setup_logger, spinner, timestamp, ensure_directory
 
